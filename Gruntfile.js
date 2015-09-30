@@ -320,7 +320,7 @@ module.exports = function (grunt) {
       // Update `url` below to the public URL for your site
       mobile: {
         options: {
-          url: "https://incandescent-heat-3687.firebaseio.com/",
+          url: "https://cugbmaopolymer.firebaseio.com/",
           locale: "en_GB",
           strategy: "mobile",
           threshold: 80

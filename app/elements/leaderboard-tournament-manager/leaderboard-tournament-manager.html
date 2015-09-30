@@ -9,13 +9,13 @@
         <core-style ref="section--content"></core-style>
 
         <firebase-element id="userHostedTournamentsFireBase"
-                          location="{{userDetails ? 'https://incandescent-heat-3687.firebaseio.com/users/' + userDetails.uid + '/hostedtournaments' : null}}"
+                          location="{{userDetails ? 'https://cugbmaopolymer.firebaseio.com/users/' + userDetails.uid + '/hostedtournaments' : null}}"
                           dataReady="{{userHostedTournamentsReady}}"
                           data="{{userHostedTournaments}}">
         </firebase-element>
 
         <firebase-element id="userTournamentsFireBase"
-                          location="{{userDetails ? 'https://incandescent-heat-3687.firebaseio.com/users/' + userDetails.uid + '/tournaments' : null}}"
+                          location="{{userDetails ? 'https://cugbmaopolymer.firebaseio.com/users/' + userDetails.uid + '/tournaments' : null}}"
                           dataReady="{{userTournamentsReady}}"
                           data="{{userTournaments}}">
         </firebase-element>
@@ -179,7 +179,7 @@
 
         selected: 'manageTournaments',
 
-        tournamentsLocation: 'https://incandescent-heat-3687.firebaseio.com/tournaments/',
+        tournamentsLocation: 'https://cugbmaopolymer.firebaseio.com/tournaments/',
 
         hostedTournamentToUpdate: {},
 
@@ -500,7 +500,7 @@
 
           if (this.userDetails && this.hostUserId.length > 0) {
 
-            hostPlayers = new Firebase('https://incandescent-heat-3687.firebaseio.com/users/' + this.hostUserId);
+            hostPlayers = new Firebase('https://cugbmaopolymer.firebaseio.com/users/' + this.hostUserId);
 
             hostPlayers.once('value', function (snap) {
 
@@ -568,10 +568,10 @@
         // ToDo - link to a route that can add players associated to tournament host
         invitePlayers: function() {
 
-          var mailToLink = 'https%3A%2F%2Fincandescent-heat-3687.firebaseapp.com%2F%3Ftournament%3D' +
+          var mailToLink = 'https%3A%2F%2Fcugbmaopolymer.firebaseapp.com%2F%3Ftournament%3D' +
           this.tournamentIdToInvite + '%26host%3D' + this.userDetails.uid;
 
-          var liveLink = 'https%3A%2F%2Fincandescent-heat-3687.firebaseapp.com%2F%3Flive%3D' +
+          var liveLink = 'https%3A%2F%2Fcugbmaopolymer.firebaseapp.com%2F%3Flive%3D' +
             this.tournamentIdToInvite + '#scoreboard';
 
           window.location.href = 'mailto:?subject=' + this.tournamentNameToInvite +

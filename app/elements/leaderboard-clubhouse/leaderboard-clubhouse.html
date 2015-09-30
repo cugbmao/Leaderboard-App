@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="leaderboard-clubhouse.css">
 
     <firebase-element id="userTournamentsFireBase"
-                      location="{{userDetails ? 'https://incandescent-heat-3687.firebaseio.com/users/' + userDetails.uid + '/tournaments' : null}}"
+                      location="{{userDetails ? 'https://cugbmaopolymer.firebaseio.com/users/' + userDetails.uid + '/tournaments' : null}}"
                       dataReady="{{userTournamentsReady}}"
                       data="{{userTournaments}}"
                       on-child-added="{{userJoinedTournament}}"
@@ -176,7 +176,7 @@
         // Current status of the tournament
         tournamentStatus: '',
 
-        tournamentsLocation: 'https://incandescent-heat-3687.firebaseio.com/tournaments/',
+        tournamentsLocation: 'https://cugbmaopolymer.firebaseio.com/tournaments/',
 
         sectionData: {
           'submitCards': {
@@ -282,7 +282,7 @@
           this.handicapPlayers.forEach(function(player) {
 
             handicapPlayerId = player.uid;
-            user = new Firebase('https://incandescent-heat-3687.firebaseio.com/users/' + handicapPlayerId + '/handicap');
+            user = new Firebase('https://cugbmaopolymer.firebaseio.com/users/' + handicapPlayerId + '/handicap');
             user.set(player.newHandicap);
 
           }, this);

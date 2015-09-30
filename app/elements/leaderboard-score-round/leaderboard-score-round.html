@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="leaderboard-score-round.css">
 
     <firebase-element id="userTournamentsFireBase"
-                      location="{{userDetails ? 'https://incandescent-heat-3687.firebaseio.com/users/' + userDetails.uid + '/tournaments' : null}}"
+                      location="{{userDetails ? 'https://cugbmaopolymer.firebaseio.com/users/' + userDetails.uid + '/tournaments' : null}}"
                       dataReady="{{userTournamentsReady}}"
                       data="{{userTournaments}}"
                       on-child-added="{{userJoinedTournament}}"
@@ -198,9 +198,9 @@
 
         showScoreGroupButton: false,
 
-        usersLocation: 'https://incandescent-heat-3687.firebaseio.com/users/',
+        usersLocation: 'https://cugbmaopolymer.firebaseio.com/users/',
 
-        tournamentsLocation: 'https://incandescent-heat-3687.firebaseio.com/tournaments/',
+        tournamentsLocation: 'https://cugbmaopolymer.firebaseio.com/tournaments/',
 
         backButtonTapped: false,
 
